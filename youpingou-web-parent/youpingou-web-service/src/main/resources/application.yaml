@@ -1,0 +1,37 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: web-service
+  datasource:
+      url: jdbc:mysql://127.0.0.1:3306/shop?useUnicode=true&characterEncoding=utf8&autoReconnect=true&allowMultiQueries=true
+      username: root
+      password:123456
+      driver-class-name: com.mysql.jdbc.Driver
+      druid:
+        initial-size: 5
+        min-idle: 5
+        max-active: 20
+        max-wait: 1000
+        test-on-borrow: true
+  redis:
+      database: 0
+      host: 127.0.0.1
+      port: 6379
+      jedis:
+        pool:
+          max-idle: 8
+          min-idle: 0
+          max-active: 8
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka
+  instance:
+    prefer-ip-address: true
+
+sc:
+  jwt:
+    pubKeyPath: D:/rsa/rsa.pub # 公钥地址

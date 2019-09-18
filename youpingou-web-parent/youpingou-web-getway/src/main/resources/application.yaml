@@ -1,0 +1,54 @@
+#1. 端口
+#2. 名字
+#3. eureka服务的地址
+#4. zuul的路由配置
+server:
+  port: 9091
+spring:
+  application:
+    name: api-web-gateway
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka
+  instance:
+    prefer-ip-address: true
+zuul:
+  prefix: /v1
+  retryable: true
+  routes:
+    web-service: /web-service/**
+    auth-service: /auth-service/**
+  sensitive-headers:
+ribbon:
+  ConnectTimeout: 100
+  ReadTimeout: 600
+  OkToRetryOnAllOperations: true
+  MaxAutoRetriesNextServer: 2
+  MaxAutoRetries: 1
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 12000
+sc:
+   jwt:
+      pubKeyPath: E:\rsa\rsa.pub  # 公钥地址
+   filter:
+      allowPaths: #白名单不过滤的地址
+         - /sms
+         - /register
+         - /login
+         - /categorys
+         - /auth-service
+         - /news
+         - /brands
+         - /specifications
+         - /search-service
+         - /goods
+         - /comments
+         - /address

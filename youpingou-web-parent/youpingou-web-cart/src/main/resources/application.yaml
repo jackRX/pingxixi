@@ -1,0 +1,25 @@
+server:
+  port: 9098
+spring:
+  application:
+    name: cart-service
+  redis:
+    database: 0
+    host: 127.0.0.1
+    port: 6379
+    jedis:
+      pool:
+        max-idle: 8
+        min-idle: 0
+        max-active: 8
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka
+  instance:
+    prefer-ip-address: true
+sc:
+   jwt:
+      pubKeyPath: E:\rsa\rsa.pub  # 公钥地址
