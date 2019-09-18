@@ -1,0 +1,15 @@
+<html>
+<head>
+    <title>qrcode测试</title>
+    <script src="js/qrcode.min.js"></script>
+</head>
+    <body>
+    <!-- 一个div，id为qrcode -->    
+    <div id="qrcode"></div>
+
+    <script type="text/javascript">
+        new QRCode(document.getElementById("qrcode"), "http://www.baidu.com");  // 设置要生成二维码的链接
+    </script>
+
+    </body>
+</html>

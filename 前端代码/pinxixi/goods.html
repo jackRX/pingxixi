@@ -1,0 +1,1249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>商品页面</title>
+	<link rel="stylesheet" href="style/base.css" type="text/css">
+	<link rel="stylesheet" href="style/global.css" type="text/css">
+	<link rel="stylesheet" href="style/header.css" type="text/css">
+	<link rel="stylesheet" href="style/goods.css" type="text/css">
+	<link rel="stylesheet" href="style/common.css" type="text/css">
+	<link rel="stylesheet" href="style/bottomnav.css" type="text/css">
+	<link rel="stylesheet" href="style/footer.css" type="text/css">
+	
+	<!--引入jqzoom css -->
+	<link rel="stylesheet" href="style/jqzoom.css" type="text/css">
+
+	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="js/header.js"></script>
+	<script type="text/javascript" src="js/goods.js"></script>
+	<script type="text/javascript" src="js/jqzoom-core.js"></script>
+	 
+	<!-- jqzoom 效果 -->
+	<script type="text/javascript">
+		$(function(){
+			
+		})
+	</script>
+</head>
+<body>
+<div id="app">	
+	<!-- 顶部导航 start -->
+	<topnav></topnav>
+	<!-- 顶部导航 end -->
+	
+	<div style="clear:both;"></div>
+
+	<!-- 头部 start -->
+	<div class="header w1210 bc mt15">
+		<!-- 头部上半部分 start 包括 logo、搜索、用户中心和购物车结算 -->
+		<div class="logo w1210">
+			<h1 class="fl"><a href="index.html"><img src="images/logo.png" alt="商城"></a></h1>
+			<!-- 头部搜索 start -->
+			<!-- <div class="search fl">
+				<div class="search_form">
+					<div class="form_left fl"></div>
+					<form action="" name="serarch" method="get" class="fl">
+						<input type="text" class="txt" value="请输入商品关键字" /><input type="submit" class="btn" value="搜索" />
+					</form>
+					<div class="form_right fl"></div>
+				</div>
+				
+				<div style="clear:both;"></div>
+
+				<div class="hot_search">
+					<strong>热门搜索:</strong>
+					<a href="">D-Link无线路由</a>
+					<a href="">休闲男鞋</a>
+					<a href="">TCL空调</a>
+					<a href="">耐克篮球鞋</a>
+				</div>
+			</div> -->
+			<search></search>
+			<!-- 头部搜索 end -->
+
+			<!-- 用户中心 start-->
+			<div class="user fl">
+				<dl>
+					<dt>
+						<em></em>
+						<a href="">用户中心</a>
+						<b></b>
+					</dt>
+					<dd>
+						<div class="prompt">
+							您好，请<a href="">登录</a>
+						</div>
+						<div class="uclist mt10">
+							<ul class="list1 fl">
+								<li><a href="">用户信息></a></li>
+								<li><a href="">我的订单></a></li>
+								<li><a href="">收货地址></a></li>
+								<li><a href="">我的收藏></a></li>
+							</ul>
+
+							<ul class="fl">
+								<li><a href="">我的留言></a></li>
+								<li><a href="">我的红包></a></li>
+								<li><a href="">我的评论></a></li>
+								<li><a href="">资金管理></a></li>
+							</ul>
+
+						</div>
+						<div style="clear:both;"></div>
+						<div class="viewlist mt10">
+							<h3>最近浏览的商品：</h3>
+							<ul>
+								<li><a href=""><img src="images/view_list1.jpg" alt="" /></a></li>
+								<li><a href=""><img src="images/view_list2.jpg" alt="" /></a></li>
+								<li><a href=""><img src="images/view_list3.jpg" alt="" /></a></li>
+							</ul>
+						</div>
+					</dd>
+				</dl>
+			</div>
+			<!-- 用户中心 end-->
+
+			<!-- 购物车 start -->
+			<div class="cart fl">
+				<dl>
+					<dt>
+						<a href="">去购物车结算</a>
+						<b></b>
+					</dt>
+					<dd>
+						<div class="prompt">
+							购物车中还没有商品，赶紧选购吧！
+						</div>
+					</dd>
+				</dl>
+			</div>
+			<!-- 购物车 end -->
+		</div>
+		<!-- 头部上半部分 end -->
+		
+		<div style="clear:both;"></div>
+
+		<!-- 导航条部分 start -->
+		<div class="nav w1210 bc mt10">
+			<!--  商品分类部分 start-->
+			<div class="category fl cat1">
+				<div class="cat_hd off">  <!-- 注意，首页在此div上只需要添加cat_hd类，非首页，默认收缩分类时添加上off类，并将cat_bd设置为不显示(加上类none即可)，鼠标滑过时展开菜单则将off类换成on类 -->
+					<h2>全部商品分类</h2>
+					<em></em>
+				</div>
+				
+				<div class="cat_bd none"> 
+					
+					<div class="cat item1">
+						<h3><a href="">图像、音像、数字商品</a> <b></b></h3>
+						<div class="cat_detail none">
+							<dl class="dl_1st">
+								<dt><a href="">电子书</a></dt>
+								<dd>
+									<a href="">免费</a>
+									<a href="">小说</a>
+									<a href="">励志与成功</a>
+									<a href="">婚恋/两性</a>
+									<a href="">文学</a>
+									<a href="">经管</a>
+									<a href="">畅读VIP</a>						
+								</dd>
+							</dl>
+
+							<dl>
+								<dt><a href="">数字音乐</a></dt>
+								<dd>
+									<a href="">通俗流行</a>
+									<a href="">古典音乐</a>
+									<a href="">摇滚说唱</a>
+									<a href="">爵士蓝调</a>
+									<a href="">乡村民谣</a>
+									<a href="">有声读物</a>
+								</dd>
+							</dl>
+
+							<dl>
+								<dt><a href="">音像</a></dt>
+								<dd>
+									<a href="">音乐</a>
+									<a href="">影视</a>
+									<a href="">教育音像</a>
+									<a href="">游戏</a>
+								</dd>
+							</dl>
+
+							<dl>
+								<dt><a href="">文艺</a></dt>
+								<dd>
+									<a href="">小说</a>
+									<a href="">文学</a>
+									<a href="">青春文学</a>
+									<a href="">传纪</a>
+									<a href="">艺术</a>
+									<a href="">经管</a>
+									<a href="">畅读VIP</a>						
+								</dd>
+							</dl>
+
+							<dl>
+								<dt><a href="">人文社科</a></dt>
+								<dd>
+									<a href="">历史</a>
+									<a href="">心理学</a>
+									<a href="">政治/军事</a>
+									<a href="">国学/古籍</a>
+									<a href="">哲学/宗教</a>
+									<a href="">社会科学</a>
+								</dd>
+							</dl>
+
+							<dl>
+								<dt><a href="">经管励志</a></dt>
+								<dd>
+									<a href="">经济</a>
+									<a href="">金融与投资</a>
+									<a href="">管理</a>
+									<a href="">励志与成功</a>
+								</dd>
+							</dl>
+
+							<dl>
+								<dt><a href="">人文社科</a></dt>
+								<dd>
+									<a href="">历史</a>
+									<a href="">心理学</a>
+									<a href="">政治/军事</a>
+									<a href="">国学/古籍</a>
+									<a href="">哲学/宗教</a>
+									<a href="">社会科学</a>
+								</dd>
+							</dl>
+
+							<dl>
+								<dt><a href="">生活</a></dt>
+								<dd>
+									<a href="">烹饪/美食</a>
+									<a href="">时尚/美妆</a>
+									<a href="">家居</a>
+									<a href="">娱乐/休闲</a>
+									<a href="">动漫/幽默</a>
+									<a href="">体育/运动</a>
+								</dd>
+							</dl>
+
+							<dl>
+								<dt><a href="">科技</a></dt>
+								<dd>
+									<a href="">科普</a>
+									<a href="">建筑</a>
+									<a href="">IT</a>
+									<a href="">医学</a>
+									<a href="">工业技术</a>
+									<a href="">电子/通信</a>
+									<a href="">农林</a>
+									<a href="">科学与自然</a>
+								</dd>
+							</dl>
+
+						</div>
+					</div>
+
+					<div class="cat">
+						<h3><a href="">家用电器</a><b></b></h3>
+						<div class="cat_detail">
+							<dl class="dl_1st">
+								<dt><a href="">大家电</a></dt>
+								<dd>
+									<a href="">平板电视</a>
+									<a href="">空调</a>
+									<a href="">冰箱</a>
+									<a href="">洗衣机</a>
+									<a href="">热水器</a>
+									<a href="">DVD</a>
+									<a href="">烟机/灶具</a>						
+								</dd>
+							</dl>
+
+							<dl>
+								<dt><a href="">生活电器</a></dt>
+								<dd>
+									<a href="">取暖器</a>
+									<a href="">加湿器</a>
+									<a href="">净化器</a>
+									<a href="">饮水机</a>
+									<a href="">净水设备</a>
+									<a href="">吸尘器</a>
+									<a href="">电风扇</a>						
+								</dd>
+							</dl>
+
+							<dl>
+								<dt><a href="">厨房电器</a></dt>
+								<dd>
+									<a href="">电饭煲</a>
+									<a href="">豆浆机</a>
+									<a href="">面包机</a>
+									<a href="">咖啡机</a>
+									<a href="">微波炉</a>
+									<a href="">电磁炉</a>
+									<a href="">电水壶</a>						
+								</dd>
+							</dl>
+
+							<dl>
+								<dt><a href="">个护健康</a></dt>
+								<dd>
+									<a href="">剃须刀</a>
+									<a href="">电吹风</a>
+									<a href="">按摩器</a>
+									<a href="">足浴盆</a>
+									<a href="">血压计</a>
+									<a href="">体温计</a>
+									<a href="">血糖仪</a>						
+								</dd>
+							</dl>
+
+							<dl>
+								<dt><a href="">五金家装</a></dt>
+								<dd>
+									<a href="">灯具</a>
+									<a href="">LED灯</a>
+									<a href="">水槽</a>
+									<a href="">龙头</a>
+									<a href="">门铃</a>
+									<a href="">电器开关</a>
+									<a href="">插座</a>						
+								</dd>
+							</dl>
+						</div>
+					</div>
+
+					<div class="cat">
+						<h3><a href="">手机、数码</a><b></b></h3>
+						<div class="cat_detail none">
+							
+						</div>
+					</div>
+
+					<div class="cat">
+						<h3><a href="">电脑、办公</a><b></b></h3>
+						<div class="cat_detail none">
+							
+						</div>
+					</div>
+					
+					<div class="cat">
+						<h3><a href="">家局、家具、家装、厨具</a><b></b></h3>
+						<div class="cat_detail none">
+							
+						</div>
+					</div>
+					
+					<div class="cat">
+						<h3><a href="">服饰鞋帽</a><b></b></h3>
+						<div class="cat_detail none">
+							
+						</div>
+					</div>
+					
+					<div class="cat">
+						<h3><a href="">个护化妆</a><b></b></h3>
+						<div class="cat_detail none">
+							
+						</div>
+					</div>
+					
+					<div class="cat">
+						<h3><a href="">礼品箱包、钟表、珠宝</a><b></b></h3>
+						<div class="cat_detail none">
+							
+						</div>
+					</div>
+
+					<div class="cat">
+						<h3><a href="">运动健康</a><b></b></h3>
+						<div class="cat_detail none">
+							
+						</div>
+					</div>
+
+					<div class="cat">
+						<h3><a href="">汽车用品</a><b></b></h3>
+						<div class="cat_detail none">
+							
+						</div>
+					</div>
+					
+					<div class="cat">
+						<h3><a href="">母婴、玩具乐器</a><b></b></h3>
+						<div class="cat_detail none">
+							
+						</div>
+					</div>
+
+					<div class="cat">
+						<h3><a href="">食品饮料、保健食品</a><b></b></h3>
+						<div class="cat_detail none">
+							
+						</div>
+					</div>
+
+					<div class="cat">
+						<h3><a href="">彩票、旅行、充值、票务</a><b></b></h3>
+						<div class="cat_detail none">
+							
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+			<!--  商品分类部分 end--> 
+
+			<div class="navitems fl">
+				<ul class="fl">
+					<li class="current"><a href="">首页</a></li>
+					<li><a href="">电脑频道</a></li>
+					<li><a href="">家用电器</a></li>
+					<li><a href="">品牌大全</a></li>
+					<li><a href="">团购</a></li>
+					<li><a href="">积分商城</a></li>
+					<li><a href="">夺宝奇兵</a></li>
+				</ul>
+				<div class="right_corner fl"></div>
+			</div>
+		</div>
+		<!-- 导航条部分 end -->
+	</div>
+	<!-- 头部 end-->
+
+	<div style="clear:both;"></div>
+
+
+	<!-- 商品页面主体 start -->
+	<div class="main w1210 mt10 bc">
+		<!-- 面包屑导航 start -->
+		<div class="breadcrumb">
+			<h2>当前位置：
+				<a href="">首页</a> > 
+				<a href="">{{goodsInfo.cat1_info.cat_name}}</a> > 
+				<a href="">{{goodsInfo.cat2_info.cat_name}}</a> > 
+				<a href="">{{goodsInfo.cat3_info.cat_name}}</a> >
+				{{goodsInfo.goods_name}}-{{goodsInfo.spec_info.id_txt}}
+			</h2>
+		</div>
+		<!-- 面包屑导航 end -->
+		
+		<!-- 主体页面左侧内容 start -->
+		<div class="goods_left fl">
+			<!-- 相关分类 start -->
+			<div class="related_cat leftbar mt10">
+				<h2><strong>相关分类</strong></h2>
+				<div class="leftbar_wrap">
+					<ul>
+						<li><a href="">笔记本</a></li>
+						<li><a href="">超极本</a></li>
+						<li><a href="">平板电脑</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- 相关分类 end -->
+
+			<!-- 相关品牌 start -->
+			<div class="related_cat	leftbar mt10">
+				<h2><strong>同类品牌</strong></h2>
+				<div class="leftbar_wrap">
+					<ul>
+						<li><a href="">D-Link</a></li>
+						<li><a href="">戴尔</a></li>
+						<li><a href="">惠普</a></li>
+						<li><a href="">苹果</a></li>
+						<li><a href="">华硕</a></li>
+						<li><a href="">宏基</a></li>
+						<li><a href="">神舟</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- 相关品牌 end -->
+
+			<!-- 热销排行 start -->
+			<div class="hotgoods leftbar mt10">
+				<h2><strong>热销排行榜</strong></h2>
+				<div class="leftbar_wrap">
+					<ul>
+						<li></li>
+					</ul>
+				</div>
+			</div>
+			<!-- 热销排行 end -->
+
+
+			<!-- 浏览过该商品的人还浏览了  start 注：因为和list页面newgoods样式相同，故加入了该class -->
+			<div class="related_view newgoods leftbar mt10">
+				<h2><strong>浏览了该商品的用户还浏览了</strong></h2>
+				<div class="leftbar_wrap">
+					<ul>
+						<li>
+							<dl>
+								<dt><a href=""><img src="images/relate_view1.jpg" alt="" /></a></dt>
+								<dd><a href="">ThinkPad E431(62771A7) 14英寸笔记本电脑 (i5-3230 4G 1TB 2G独显 蓝牙 win8)</a></dd>
+								<dd><strong>￥5199.00</strong></dd>
+							</dl>
+						</li>
+
+						<li>
+							<dl>
+								<dt><a href=""><img src="images/relate_view2.jpg" alt="" /></a></dt>
+								<dd><a href="">ThinkPad X230i(2306-3V9） 12.5英寸笔记本电脑 （i3-3120M 4GB 500GB 7200转 蓝牙 摄像头 Win8）</a></dd>
+								<dd><strong>￥5199.00</strong></dd>
+							</dl>
+						</li>
+
+						<li>
+							<dl>
+								<dt><a href=""><img src="images/relate_view3.jpg" alt="" /></a></dt>
+								<dd><a href="">T联想（Lenovo） Yoga13 II-Pro 13.3英寸超极本 （i5-4200U 4G 128G固态硬盘 摄像头 蓝牙 Win8）晧月银</a></dd>
+								<dd><strong>￥7999.00</strong></dd>
+							</dl>
+						</li>
+
+						<li>
+							<dl>
+								<dt><a href=""><img src="images/relate_view4.jpg" alt="" /></a></dt>
+								<dd><a href="">联想（Lenovo） Y510p 15.6英寸笔记本电脑（i5-4200M 4G 1T 2G独显 摄像头 DVD刻录 Win8）黑色</a></dd>
+								<dd><strong>￥6199.00</strong></dd>
+							</dl>
+						</li>
+
+						<li class="last">
+							<dl>
+								<dt><a href=""><img src="images/relate_view5.jpg" alt="" /></a></dt>
+								<dd><a href="">ThinkPad E530c(33662D0) 15.6英寸笔记本电脑 （i5-3210M 4G 500G NV610M 1G独显 摄像头 Win8）</a></dd>
+								<dd><strong>￥4399.00</strong></dd>
+							</dl>
+						</li>					
+					</ul>
+				</div>
+			</div>
+			<!-- 浏览过该商品的人还浏览了  end -->
+
+			<!-- 最近浏览 start -->
+			<div class="viewd leftbar mt10">
+				<h2><a href="">清空</a><strong>最近浏览过的商品</strong></h2>
+				<div class="leftbar_wrap">
+					<dl>
+						<dt><a href=""><img src="images/hpG4.jpg" alt="" /></a></dt>
+						<dd><a href="">惠普G4-1332TX 14英寸笔记...</a></dd>
+					</dl>
+
+					<dl class="last">
+						<dt><a href=""><img src="images/crazy4.jpg" alt="" /></a></dt>
+						<dd><a href="">直降200元！TCL正1.5匹空调</a></dd>
+					</dl>
+				</div>
+			</div>
+			<!-- 最近浏览 end -->
+
+		</div>
+		<!-- 主体页面左侧内容 end -->
+		
+		<!-- 商品信息内容 start -->
+		<div class="goods_content fl mt10 ml10">
+			<!-- 商品概要信息 start -->
+			<div class="summary">
+				<h3><strong>{{goodsInfo.goods_name}}--{{goodsInfo.spec_info.id_txt}}</strong></h3>
+				
+				<!-- 图片预览区域 start -->
+				<div class="preview fl">
+					<div class="midpic">
+						<a :href="goodsInfo.logo.xbiglogo" class="jqzoom" rel="gal1">   <!-- 第一幅图片的大图 class 和 rel属性不能更改 -->
+							<img :src="goodsInfo.logo.biglogo" alt="" />               <!-- 第一幅图片的中图 -->
+						</a>
+					</div>
+	
+					<!--使用说明：
+						1 、此处的预览图效果有三种类型的图片，
+						大图，中图，和小图，取得图片之后，分配到模板的时候，
+						把第一幅图片分配到 上面的midpic 中，其中大图分配到 a 标签的href属性，
+						中图分配到 img 的src上。 
+						2、下面的smallpic 则表示小图区域，格式固定，在 a 标签的 rel属性中，
+						分别指定了中图（smallimage）和大图（largeimage），img标签则显示小图，
+						按此格式循环生成即可，但在第一个li上，要加上cur类，
+						同时在第一个li 的a标签中，添加类 zoomThumbActive  -->
+
+					<div class="smallpic">
+						<a href="javascript:;" id="backward" class="off"></a>
+						<a href="javascript:;" id="forward" class="on"></a>
+						<div class="smallpic_wrap">
+							<ul>
+								<!--首图
+									rel 属性需要绑定vue中的对象的数据
+									在vue中,{} 用在style或者class属性中，style=“{类样式：true|false}”
+								-->
+								<li class="cur">
+									<a class="zoomThumbActive" href="javascript:void(0);" 
+									:rel="'{gallery: \'gal1\', smallimage: \''+goodsInfo.logo.biglogo+'\',largeimage: \''+goodsInfo.logo.xbiglogo+'\'}'">
+									<img :src="goodsInfo.logo.smlogo"></a>
+								</li>
+								<!--循环遍历photos
+									步骤：
+									1 整个rel的值首尾加单引号
+									2 将rel原始的值的单引号转义
+									3 替换rel中的死数据
+								-->
+								<li v-for="p in goodsInfo.photos">
+									<a href="javascript:void(0);" 
+										:rel="'{gallery: \'gal1\', smallimage: \''+p.bigimg+'\',largeimage: \''+p.xbigimg+'\'}'">
+										<img :src="p.smimg">
+								    </a>
+								</li>
+
+								
+							</ul>
+						</div>
+						
+					</div>
+				</div>
+				<!-- 图片预览区域 end -->
+
+				<!-- 商品基本信息区域 start -->
+				<div class="goodsinfo fl ml10">
+					<ul>
+						<li><span>商品编号： </span>{{goodsInfo.skuid}}</li>
+						<li class="market_price"><span>定价：</span><em>￥{{goodsInfo.price}}</em></li>
+						<li class="shop_price"><span>本店价：</span> <strong>￥{{goodsInfo.price}}</strong> <a href="">(降价通知)</a></li>
+						<li><span>上架时间：</span>{{goodsInfo.on_sale_date}}</li>
+						<li :class="['star','star'+goodsInfo.comment_level]"><span>商品评分：</span> <strong></strong><a href="">(已有{{goodsInfo.comment_count}}人评价)</a></li>
+						<!-- 此处的星级切换css即可 默认为5星 star4 表示4星 star3 表示3星 star2表示2星 star1表示1星 -->
+					</ul>
+					<form action="" method="post" class="choose">
+						<ul>
+							<li v-for="v in goodsInfo.spec_list" class="product">
+								<dl>
+									<dt>{{v.spec_name}}：</dt>
+									<dd>
+										<!--
+											目前是全部选中，因为所有的选项都加了 class =“selected” ，所以都选中，但是我们每个规格选项只能选择一个
+											-判断？如何判断？	
+											当前商品的信息：1:3|2:6	
+											
+											遍历数据的时候，首先遍历的是颜色，就可以获取颜色的v.id:1
+											               遍历完颜色之后，紧跟着遍历当前颜色对应的规则选项v1.id：3   4   5  
+												组合颜色 和颜色选项： 1:3    1:4    1:5
+												我拿组合选项（1:3   1:4    1:5）去  当前商品信息中（1:3|2:6）匹配 - 只要匹配到，就选中，匹配不上，就不选中
+										-->
+										<!--
+											默认选中： class="selected"	 默认值加这个属性
+											默认值在哪里？答：spec_info存放了默认值   1:5|2:6
+
+											第一层循环，遍历规格信息，先遍历 颜色 v.id=1
+											     第二层循环，遍历规格选项信息，v1.id   红色 3 亮黑色 4  深空灰色 5 
+                                                     当第一层v.id和第二层v1.id集合的时候  v.id:v1.id => 当前的颜色组合 1:3   1:4   1:5
+														判断默认信息spec_info 中是否包含 当前颜色组合
+										-->
+										<a v-for="(v1,k1) in v.options"  @click.prevent="set_spec(v.id,v1.id)"
+										:class="{selected:goodsInfo.spec_info.id_list.indexOf(v.id+':'+v1.id)!=-1}"  href="javascript:;">{{v1.option_name}} <input type="radio" name="color" value="黑色" checked="checked" /></a>
+										<input type="hidden" name="name" value="" />
+									</dd>
+								</dl>
+							</li>
+							
+							<li>
+								<dl>
+									<dt>购买数量：</dt>
+									<dd>
+										<a href="javascript:;" id="reduce_num" @click.prevent="reduce_num"></a>
+										<input type="text" @change="update_num" name="amount" value="1" v-model="buyCount" class="amount"/>
+										<a href="javascript:;" id="add_num" @click.prevent="add_num"></a>
+									</dd>
+								</dl>
+							</li>
+
+							<li>
+								<dl>
+									<dt>&nbsp;</dt>
+									<dd>
+										<!-- 加入购物车按钮  -->
+										<input  type="button" @click.prevent="addToCart" value="" class="add_btn" />
+									</dd>
+								</dl>
+							</li>
+
+						</ul>
+					</form>
+				</div>
+				<!-- 商品基本信息区域 end -->
+			</div>
+			<!-- 商品概要信息 end -->
+			
+			<div style="clear:both;"></div>
+
+			<!-- 商品详情 start -->
+			<div class="detail">
+				<div class="detail_hd">
+					<ul>
+						<li class="first"><span>商品介绍</span></li>
+						<li class="on"><span>商品评价</span></li>
+						<li><span>售后保障</span></li>
+					</ul>
+				</div>
+				<div class="detail_bd">
+					<!-- 商品介绍 start -->
+					<div class="introduce detail_div none">
+						<div class="attr mt15">
+							<ul>
+								<li><span>商品名称：</span>ThinkPadX230(2306 3T4）</li>
+								<li><span>商品编号：</span>979631</li>
+								<li><span>品牌：</span>联想（Thinkpad）</li>
+								<li><span>上架时间：</span>2013-09-18 17:58:12</li>
+								<li><span>商品毛重：</span>2.47kg</li>
+								<li><span>商品产地：</span>中国大陆</li>
+								<li><span>显卡：</span>集成显卡</li>
+								<li><span>触控：</span>非触控</li>
+								<li><span>厚度：</span>正常厚度（>25mm）</li>
+								<li><span>处理器：</span>Intel i5</li>
+								<li><span>尺寸：</span>12英寸</li>
+							</ul>
+						</div>
+
+						<div class="desc mt10">
+							<!-- 此处的内容 一般是通过在线编辑器添加保存到数据库，然后直接从数据库中读出 -->
+							<img src="images/desc1.jpg" alt="" />
+							<p style="height:10px;"></p>
+							<img src="images/desc2.jpg" alt="" />
+							<p style="height:10px;"></p>
+							<img src="images/desc3.jpg" alt="" />
+							<p style="height:10px;"></p>
+							<img src="images/desc4.jpg" alt="" />
+							<p style="height:10px;"></p>
+							<img src="images/desc5.jpg" alt="" />
+							<p style="height:10px;"></p>
+							<img src="images/desc6.jpg" alt="" />
+							<p style="height:10px;"></p>
+							<img src="images/desc7.jpg" alt="" />
+							<p style="height:10px;"></p>
+							<img src="images/desc8.jpg" alt="" />
+							<p style="height:10px;"></p>
+							<img src="images/desc9.jpg" alt="" />
+						</div>
+					</div>
+					<!-- 商品介绍 end -->
+					
+					<!-- 商品评论 start -->
+					<div class="comment detail_div mt10">
+						<div class="comment_summary">
+							<div class="rate fl">
+								<strong><em>{{comment.ratio.goods}}</em>%</strong> <br />
+								<span>好评度</span>
+							</div>
+							<div class="percent fl">
+								<dl>
+									<dt>好评（{{comment.ratio.goods}}%）</dt>
+									<!--
+										1 何时使用一个大括号？
+										答：class或者style，标识是否作用p样式 class="{p:true|false}"
+										2 现在的需求是需要保留原始的部分字符串内容
+										答：留下的字符串内容加 单引号 
+									-->
+									<dd><div :style="'width:'+comment.ratio.goods+'px'"></div></dd>
+								</dl>
+								<dl>
+									<dt>中评（{{comment.ratio.common}}%）</dt>
+									<dd><div :style="'width:'+comment.ratio.common+'px'"></div></dd>
+								</dl>
+								<dl>
+									<dt>差评（{{comment.ratio.bad}}%）</dt>
+									<dd><div :style="'width:'+comment.ratio.bad+'px'" ></div></dd>
+								</dl>
+							</div>
+							<div class="buyer fl">
+								<dl>
+									<dt>买家印象：</dt>
+									<dd v-for="v in comment.impressions"><span>{{v.title}}</span><em>({{v.count}})</em></dd>
+								</dl>
+							</div>
+						</div>
+
+						<div v-for="v in comment.comments" class="comment_items mt10">
+							<div class="user_pic">
+								<dl>
+									<dt><a href=""><img :src="v.user.face" alt="" /></a></dt>
+									<dd><a href="">{{v.user.name}}</a></dd>
+								</dl>
+							</div>
+							<div class="item">
+								<div class="title">
+									<span>{{v.created_at}}</span>
+									<strong :class="'star star'+v.star"></strong> <!-- star5表示5星级 start4表示4星级，以此类推 -->
+								</div>
+								<div class="comment_content">
+									<dl>
+										{{v.content}}
+									</dl>
+									
+								</div>
+								<div class="btns">
+									<a href="" class="reply">回复(0)</a>
+									<a href="" class="useful">有用(0)</a>
+								</div>
+							</div>
+							<div class="cornor"></div>
+						</div>
+
+						
+
+						<!-- 分页信息 start -->
+						<div class="page mt20">
+							<!-- <a href="">首页</a>
+							<a href="">上一页</a>
+							<a href="">1</a>
+							<a href="">2</a>
+							<a href="" class="cur">3</a>
+							<a href="">4</a>
+							<a href="">5</a>
+							<a href="">下一页</a>
+							<a href="">尾页</a> -->
+							<el-pagination
+								@size-change="handleSizeChange"
+								@current-change="handleCurrentChange"
+								:current-page="page"
+								:page-sizes="[3, 5, 10, 20]"
+								:page-size="per_page"
+								layout="total, sizes, prev, pager, next, jumper"
+								:total="comment.comments_count">
+							</el-pagination>
+						</div>
+						<!-- 分页信息 end -->
+
+						<!--  评论表单 start-->
+						<div class="comment_form mt20">
+							<form action="">
+								<ul>
+									<li>
+										<label for=""> 评分：</label>
+										<input type="radio" name="grade"/> <strong class="star star5"></strong>
+										<input type="radio" name="grade"/> <strong class="star star4"></strong>
+										<input type="radio" name="grade"/> <strong class="star star3"></strong>
+										<input type="radio" name="grade"/> <strong class="star star2"></strong>
+										<input type="radio" name="grade"/> <strong class="star star1"></strong>
+									</li>
+
+									<li>
+										<label for="">评价内容：</label>
+										<textarea name="" id="" cols="" rows=""></textarea>
+									</li>
+									<li>
+										<label for="">&nbsp;</label>
+										<input type="submit" value="提交评论"  class="comment_btn"/>										
+									</li>
+								</ul>
+							</form>
+						</div>
+						<!--  评论表单 end-->
+						
+					</div>
+					<!-- 商品评论 end -->
+
+					<!-- 售后保障 start -->
+					<div class="after_sale mt15 none detail_div">
+						<div>
+							<p>本产品全国联保，享受三包服务，质保期为：一年质保 <br />如因质量问题或故障，凭厂商维修中心或特约维修点的质量检测证明，享受7日内退货，15日内换货，15日以上在质保期内享受免费保修等三包服务！</p>
+							<p>售后服务电话：800-898-9006 <br />品牌官方网站：http://www.lenovo.com.cn/</p>
+
+						</div>
+
+						<div>
+							<h3>服务承诺：</h3>
+							<p>本商城向您保证所售商品均为正品行货，京东自营商品自带机打发票，与商品一起寄送。凭质保证书及京东商城发票，可享受全国联保服务（奢侈品、钟表除外；奢侈品、钟表由本商城联系保修，享受法定三包售后服务），与您亲临商场选购的商品享受相同的质量保证。本商城还为您提供具有竞争力的商品价格和运费政策，请您放心购买！</p> 
+							
+							<p>注：因厂家会在没有任何提前通知的情况下更改产品包装、产地或者一些附件，本司不能确保客户收到的货物与商城图片、产地、附件说明完全一致。只能确保为原厂正货！并且保证与当时市场上同样主流新品一致。若本商城没有及时更新，请大家谅解！</p>
+
+						</div>
+						
+						<div>
+							<h3>权利声明：</h3>
+							<p>本商城上的所有商品信息、客户评价、商品咨询、网友讨论等内容，是京东商城重要的经营资源，未经许可，禁止非法转载使用。</p>
+							<p>注：本站商品信息均来自于厂商，其真实性、准确性和合法性由信息拥有者（厂商）负责。本站不提供任何保证，并不承担任何法律责任。</p>
+
+						</div>
+					</div>
+					<!-- 售后保障 end -->
+
+				</div>
+			</div>
+			<!-- 商品详情 end -->
+
+			
+		</div>
+		<!-- 商品信息内容 end -->
+		
+
+	</div>
+	<!-- 商品页面主体 end -->
+	
+
+	<div style="clear:both;"></div>
+
+	<!-- 底部导航 start -->
+	<div class="bottomnav w1210 bc mt10">
+		<div class="bnav1">
+			<h3><b></b> <em>购物指南</em></h3>
+			<ul>
+				<li><a href="">购物流程</a></li>
+				<li><a href="">会员介绍</a></li>
+				<li><a href="">团购/机票/充值/点卡</a></li>
+				<li><a href="">常见问题</a></li>
+				<li><a href="">大家电</a></li>
+				<li><a href="">联系客服</a></li>
+			</ul>
+		</div>
+		
+		<div class="bnav2">
+			<h3><b></b> <em>配送方式</em></h3>
+			<ul>
+				<li><a href="">上门自提</a></li>
+				<li><a href="">快速运输</a></li>
+				<li><a href="">特快专递（EMS）</a></li>
+				<li><a href="">如何送礼</a></li>
+				<li><a href="">海外购物</a></li>
+			</ul>
+		</div>
+
+		
+		<div class="bnav3">
+			<h3><b></b> <em>支付方式</em></h3>
+			<ul>
+				<li><a href="">货到付款</a></li>
+				<li><a href="">在线支付</a></li>
+				<li><a href="">分期付款</a></li>
+				<li><a href="">邮局汇款</a></li>
+				<li><a href="">公司转账</a></li>
+			</ul>
+		</div>
+
+		<div class="bnav4">
+			<h3><b></b> <em>售后服务</em></h3>
+			<ul>
+				<li><a href="">退换货政策</a></li>
+				<li><a href="">退换货流程</a></li>
+				<li><a href="">价格保护</a></li>
+				<li><a href="">退款说明</a></li>
+				<li><a href="">返修/退换货</a></li>
+				<li><a href="">退款申请</a></li>
+			</ul>
+		</div>
+
+		<div class="bnav5">
+			<h3><b></b> <em>特色服务</em></h3>
+			<ul>
+				<li><a href="">夺宝岛</a></li>
+				<li><a href="">DIY装机</a></li>
+				<li><a href="">延保服务</a></li>
+				<li><a href="">家电下乡</a></li>
+				<li><a href="">京东礼品卡</a></li>
+				<li><a href="">能效补贴</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- 底部导航 end -->
+
+	<div style="clear:both;"></div>
+	<!-- 底部版权 start -->
+	<div class="footer w1210 bc mt10">
+		<p class="links">
+			<a href="">关于我们</a> |
+			<a href="">联系我们</a> |
+			<a href="">人才招聘</a> |
+			<a href="">商家入驻</a> |
+			<a href="">千寻网</a> |
+			<a href="">奢侈品网</a> |
+			<a href="">广告服务</a> |
+			<a href="">移动终端</a> |
+			<a href="">友情链接</a> |
+			<a href="">销售联盟</a> |
+			<a href="">商城论坛</a>
+		</p>
+		<p class="copyright">
+			 © 2005-2013 京东网上商城 版权所有，并保留所有权利。  ICP备案证书号:京ICP证070359号 
+		</p>
+		<p class="auth">
+			<a href=""><img src="images/xin.png" alt="" /></a>
+			<a href=""><img src="images/kexin.jpg" alt="" /></a>
+			<a href=""><img src="images/police.jpg" alt="" /></a>
+			<a href=""><img src="images/beian.gif" alt="" /></a>
+		</p>
+	</div>
+	<!-- 底部版权 end -->
+</div>
+	<script type="text/javascript">
+		document.execCommand("BackgroundImageCache", false, true);
+	</script>
+<script src="js/vue.js"></script>
+<script src="js/axios.min.js"></script>
+<script src="js/mock-min.js"></script>
+<script src="js/api.js"></script>
+<script src="js/mock.js"></script>
+<script src="components/topnav.js"></script>
+<script src="components/search.js"></script>
+<!-- 引入样式 -->
+<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+<!-- 引入组件库 -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script>
+var vm = new Vue({
+	el:"#app",
+	data:{
+		// skuid:9527, // 现在这个id先写死，后面从地址栏获取数据
+		// 如何获取（?id=1314&age=12&sex=男）的相关知识点介绍
+		// 1、 location.search:获取浏览器地址栏的参数，值类型是string，例如：?id=1314&age=12&sex=男
+		// 2、 location.search.match()    “string类型的字符串”.match(/正则/)   string匹配正则表达式,例如：["id=1314"]
+		// 3、 location.search.match(/id=\d+/)[0]  获取数组中的第0个索引位置的值 ,例如: id=1314     
+		// 4、 获取id的方式
+		//     方法一：location.search.match(/id=\d+/)[0].substring(4)  截取
+		//     方法二：location.search.match(/id=\d+/)[0].split("=")[1] 切割字符串，变成数组，获取下标为1的值
+		skuid:parseInt(location.search.match(/id=\d+/)[0].split("=")[1]),
+		goodsInfo:{
+			spec_info:{},
+			cat1_info:{},// 当对象中的属性是一个对象的时候，需要显式声明
+			cat2_info:{},
+			cat3_info:{},
+			logo:{}
+		},
+		buyCount:1, //购买数量
+		per_page:10,// 每页需要显示的条数
+		page:1,// 当前页码
+		comment:[{
+			ratio:{}
+		}]
+	},
+	methods:{
+		set_spec(vid,v1id){
+			 console.log(vid+':'+v1id)
+			// 目前已经能够获取点击的规格选项的信息 1:3  1:4  1:5  2:6  2:7
+			// 想办法组装 新的  组合信息    
+			// 比如，目前 商品默认信息是 1:5|2:6   目前 点击的就是 2:7（内存256）
+			//  就要把默认信息改成 1:5|2:7
+			
+			// \d  0- 9    +至少重复1次
+			let regex = new RegExp(vid+':\\d+') // 2:\d+
+			
+			// 将默认信息的  2:\d+ 替换成 2:7
+			let newSpec = this.goodsInfo.spec_info.id_list.replace(regex,vid+':'+v1id) 
+			//let newSpec = "11:5|1:5".replace(regex,vid+':'+v1id) 
+			console.log(newSpec)	
+			
+
+			
+			//根据newSpec去sku_list中查找skuid信息
+			for(let i=0;i<this.goodsInfo.sku_list.length;i++){
+				if(this.goodsInfo.sku_list[i].id_list==newSpec){
+					this.skuid = this.goodsInfo.sku_list[i].skuid
+					break	
+				}
+			}
+			// 已经找到了skuid
+			location.href="goods.html?id="+this.skuid
+
+		},
+		reduce_num(){
+			if(this.buyCount<=1) {
+				return
+			}
+			this.buyCount--
+		},
+		add_num(){
+			this.buyCount++
+		},
+		update_num(){
+			console.log(this.buyCount)
+			// 当购买数量发生改变的时候，可以触发此函数
+			// 判断buyCount，必须是数字，必须大于0
+			// 必须是数字
+			// 写法一和写法二有什么区别？
+			// ^ 精确开始
+			// $ 精确结束
+			// let rule = /\d+/ // 写法一：模糊匹配 ，例如 11.11   11!11  11$11 都可以匹配通过
+			let rule = /^\d+$/ // 写法二：精确匹配,例如11.11   11!11  11$11  都通不过，只能纯数字, 11   22
+			// 使用正则去验证 值内容
+			let flag = rule.test(this.buyCount)	
+			if(flag){// 符合规则
+				// 验证数字是否>0	
+				if(this.buyCount<1){
+					// 给出提示
+					alert("购买数量至少为1，请重新输入")	
+					// buyCount重新赋值
+					this.buyCount=1
+				}	
+
+			}else{//不符合规则
+				// 给出提醒
+				alert("购买数量必须是数值类型，请重新输入")
+				// 并且将值改成1
+				this.buyCount=1
+			}
+
+		},
+		handleSizeChange(val){
+			// 1 此函数功能：当每页显示条数改变的时候自动触发
+			// val：新的每页需要显示的条数
+			this.per_page = val
+			// 2 发送ajax请求
+			getComments(this.goodsInfo.spuid,this.per_page,this.page).then(res=>{
+				this.comment = res.data	
+			})
+		},
+		handleCurrentChange(val){
+			// 1 此函数的功能：当页码改变的时候自动触发
+			// val : 新页码
+			this.page = val
+			// 2 发送ajax请求
+			getComments(this.goodsInfo.spuid,this.per_page,this.page).then(res=>{
+				console.log(res)
+				this.comment.radio=res.data.redio
+				this.comment = res.data	
+			})
+		},
+		addToCart(){
+			//将商品添加至购物车
+			//1 准备购物车中的数据
+			let goods={
+				skuid:this.skuid,
+				goods_name:this.goodsInfo.goods_name,
+				price:this.goodsInfo.price,
+				count:this.buyCount,
+				checked:true,//默认都勾选
+				midlogo:this.goodsInfo.logo.smlogo,
+				spec_info:this.goodsInfo.spec_info.id_txt
+			}
+
+			// 判断用户是否已经登录
+			let token = localStorage.getItem("token")
+			if(token){
+				// 用户已经登录
+				addCarts(goods).then(res=>{
+					if(res.data.errno==0){
+						location.href="flow1.html"
+					}else{
+						alert(res.data.errmsg)
+					}
+				})
+				return
+			}
+
+			//2 如果不从localStorage中取出数据，直接放的话，会引起什么问题？答：前面的数据会被覆盖
+			// 所以我们先从localStorage中取出数据
+			let cart = localStorage.getItem("cart") 
+			//3 判断购物车数据是否为空
+			if(cart){
+				//情况一：cart不为空
+				// 定义一个变量	
+				let isNew = true
+				// 强转购物车
+				cart = JSON.parse(cart)	
+				// 添加至购物车的时候判断是否已经存在
+				for(let i=0;i<cart.length;i++){
+					// 判断skuid
+					if(cart[i].skuid==goods.skuid){
+						isNew = false
+						console.log(typeof(goods.count))
+						// 只增加数量
+						cart[i].count += parseInt(goods.count)
+						break	
+					}
+				}
+				// 向数组中追加 新增商品信息
+				if(isNew){
+					cart.push(goods)
+				}	
+			}else{
+				//情况二：localStorage中还没有存入cart购物车信息
+				cart = [goods]// 将goods存入购物车cart中	
+			}
+			// 将cart重新放入localStorage中
+			localStorage.setItem("cart",JSON.stringify(cart))
+			// 跳转至flow1.html页面
+			location.href="flow1.html"
+		}
+	},
+	created(){
+		getGoodsInfo(this.skuid).then(res => {
+			this.goodsInfo = res.data
+			//由于getComments需要使用当前axios请求返回的数据
+			// getComments(this.goodsInfo.spuid,this.per_page,this.page).then(res => {
+			// 	console.log(res)
+			// 	this.comment = res.data	
+			// })
+
+			return getComments(this.goodsInfo.spuid,this.per_page,this.page)
+		}).then(res => {
+			console.log(res.data)
+			this.comment = res.data	
+		})
+		// 获取商品评论数据
+		// 代码不能写在这个地方
+		// getComments(this.goodsInfo.spuid)
+		
+	},
+	updated(){
+		$('.jqzoom').jqzoom({
+			zoomType: 'standard',
+			lens:true,
+			preloadImages: false,
+			alwaysOn:false,
+			title:false,
+			zoomWidth:400,
+			zoomHeight:400
+		})
+		//商品缩略图左右移动效果
+		//点击后退
+		$("#backward").click(function(){
+			var left = parseInt($(".smallpic_wrap ul").css("left")); //获取ul水平方向偏移量
+			var offset = left + 62;
+			if (offset <= 0){
+				$(".smallpic_wrap ul").stop(true,false).animate({left:offset},"slow",'',function(){
+					//动画完成之后，判断是否到了左边缘
+					if ( parseInt($(".smallpic_wrap ul").css("left")) >= 0 ){
+						$("#backward").removeClass("on").addClass("off");
+					}
+				});
+				//开启右边的按钮
+				$("#forward").removeClass("off").addClass("on");			
+			}
+			
+			$(this).blur(); //去除ie 虚边框
+		})
+
+		//点击前进
+		$("#forward").click(function(){
+			var left = parseInt($(".smallpic_wrap ul").css("left")); //获取ul水平方向偏移量
+			var len = $(".smallpic_wrap li").size() * 62; //获取图片的整体宽度(图片数 * 图片宽度)558
+			var offset = left - 62;
+			if (offset >= -(len - 62*5)){
+				$(".smallpic_wrap ul").stop(true,false).animate({left:offset},"slow",'',function(){
+					//判断是否到了右边缘
+					if ( parseInt($(".smallpic_wrap ul").css("left")) <= -(len - 62*5) ){
+						$("#forward").removeClass("on").addClass("off");
+					}
+				});
+				//开启左边的按钮
+				$("#backward").addClass("on").removeClass("off");
+				
+			}
+			
+			$(this).blur(); //去除ie 虚边框
+		})
+
+		
+
+	}
+
+
+})
+
+
+
+</script>
+
+</body>
+</html>
