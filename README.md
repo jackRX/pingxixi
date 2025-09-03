@@ -1,2 +1,4 @@
 # -
-这是用Spring cloud 开发的微服务电商项目，前端用vue来编写
+基于 Spring Cloud 的微服务电商项目，前端采用 Vue 实现。
+
+
